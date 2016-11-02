@@ -1,0 +1,17 @@
+{
+  "products": [{
+    "name": "Sunglasses 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "price": 100,
+    "brand": "Test Brand",
+    "quantity": 10,
+    "imageUrl": "http://retrosuperfuture.com/working/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/s/u/super-1layout-s83.jpg"
+    }, {
+      "name": "Sunglasses 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": 80,
+      "brand": "Test Brand",
+      "quantity": 10,
+      "imageUrl": "http://retrosuperfuture.com/working/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/s/u/super-layout1-nl9.jpg"
+      }]
+}
