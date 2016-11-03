@@ -1,6 +1,10 @@
-<h1 id="logo">Snglss</h1>
-{{#link-to 'index'}}<h2>Home</h2>{{/link-to}}
-{{#link-to 'shop'}}<h2>Shop</h2>{{/link-to}}
-{{#link-to 'cart'}}<i class="fa fa-shopping-cart" aria-hidden="true"></i>{{/link-to}}
-{{admin-portal}}
-{{outlet}}
+<div class="container">
+  <ul class="nav nav-pills">
+    <li role="presentation" id="logo">Snglss</li>
+    <li role="presentation">{{#link-to 'index'}}Home{{/link-to}}</li>
+    <li role="presentation">{{#link-to 'shop'}}Shop{{/link-to}}</li>
+    <li role="presentation">{{#link-to 'cart'}}<i class="fa fa-shopping-cart" aria-hidden="true"></i>{{/link-to}}</li>
+    <li role="presentation">{{admin-portal}}</li>
+  </ul>
+  {{outlet}}
+</div>

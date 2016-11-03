@@ -1,7 +1,13 @@
-{{#each shoppingCart.items as |item|}}
-  <div class="itemDetail">
-    <h3>{{item.name}} -- ${{item.price}} -- {{item.quantity}}</h3>
-    inventory: {{item.inventory}}
-    <button {{action 'remove' item}}>Remove</button>
-  </div>
-{{/each}}
+{{#if shoppingCart.items}}
+  {{#each shoppingCart.items as |item|}}
+    <div class="itemDetail">
+      <h3>{{item.name}}</h3>
+      <h4>Price: ${{item.price}}</h4>
+      <h4>Quantity: {{item.quantity}}</h4>
+      <button {{action 'remove' item}}>Remove</button>
+      <hr>
+    </div>
+  {{/each}}
+{{else}}
+  <p>You have no items in your shopping cart!</p>
+{{/if}}
