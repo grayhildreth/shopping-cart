@@ -4,22 +4,16 @@ export default Ember.Service.extend({
   items: [],
   total: 0,
   add(item){
-    this.get('items').pushObject(item);
-  },
+    if (item.get('quantity') === 0){
+      this.get('items').pushObject(item);
+    }
+      item.set('quantity', item.get('quantity') + 1);
+    },
   remove(item){
-    // console.log(this.get('items').indexOf(item));
-
-    // for(var i = 0; i < this.get('items'); i++){
-    //   if()
-    // }
-    // console.log(item.id);
-    // var itemToRemove = this.store.findRecord('product', item.id);
-    // console.log(itemToRemove);
-    // // var i = this.get('items').indexOf(item);
-    // // if (i != -1){
-    // //   this.get('items').splice(i, 1);
-    // // }
-    // // console.log(this.get('items'));
+    if (item.get('quantity') === 1){
+      this.get('items').removeObject(item);
+    }
+    item.set('quantity', item.get('quantity') -1);
   },
   addTotal(item){
     var total = this.get('total');
@@ -28,7 +22,11 @@ export default Ember.Service.extend({
   },
   removeFromTotal(item){
     var total = this.get('total');
-    total -= item.data.price;
-    this.set('total', total);
+    if(total > 0){
+      total -= item.data.price;
+      this.set('total', total);
+    } else{
+      total = 0;
+    }
   }
 });
