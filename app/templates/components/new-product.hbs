@@ -1,0 +1,27 @@
+<form>
+  <div class="form-group">
+    <label for="name">Product Name</label>
+    {{input value=name type="text"}}
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    {{textarea value=description type="text"}}
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    {{input value=price type="number"}}
+  </div>
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    {{input value=brand type="text"}}
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    {{input value=imageUrl type="text"}}
+  </div>
+  <div class="form-group">
+    <label for="inventory">Inventory Amount</label>
+    {{input value=inventory type="number"}}
+  </div>
+  <button {{action 'save'}}>Add Product</button>
+</form>

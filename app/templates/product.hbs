@@ -1,9 +1,11 @@
+{{update-product product=model update="update"}}
+<button {{action 'delete' model}}>Delete</button>
 <div class="productDetail">
   <h3>Product: {{model.name}}</h3>
   <h3>Description: {{model.description}}</h3>
   <h3>Brand: {{model.brand}}</h3>
   <h3>${{model.price}}</h3>
-  <h3>Remaining Quantity: {{model.quantity}}</h3>
+  <h3>Remaining Quantity: {{model.inventory}}</h3>
   <img src={{model.imageUrl}} class="img-responsive">
   <!-- <button class="btn" {{action 'addToCart' model}}>Add to Cart</button> -->
 </div>

@@ -6,10 +6,18 @@ export default Ember.Route.extend({
     return this.store.findRecord('product', params.product_id);
   },
   actions: {
-    // addToCart(item){
-    //   debugger;
-    //   this.get('shoppingCart').add(item);
-    //   console.log(shoppingCart.items);
-    // }
+    update(product, params){
+      Object.keys(params).forEach(function(key){
+        if(params[key] !==undefined){
+          product.set(key, params[key]);
+        }
+      });
+      product.save();
+      this.transitionTo('product');
+    },
+    delete(product){
+      product.destroyRecord();
+      this.transitionTo('shop');
+    }
   }
 });

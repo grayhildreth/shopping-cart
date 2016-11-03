@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     addToCart(product){
       this.get('shoppingCart').add(product);
       this.get('shoppingCart').addTotal(product);
-      console.log(this.get('shoppingCart.items'));
-    }
+    },
+
   }
 });
